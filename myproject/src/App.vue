@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import headerDiv from './components/header'
+import headerDiv from './components/basic/header'
 export default {
   name: 'App',
   components:{
@@ -34,7 +34,18 @@ export default {
     .clearfix { *zoom:1; }
 
 
-   body{
-      /* background: url('./assets/bg.jpg') center -20px no-repeat */
-    }
+   .dropdown{
+      display: inline-block;
+      width: 0;
+      height: 0;
+      vertical-align: -4px;
+      content: "";
+      border: 5px solid;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+   }
+   .drop-ico{
+     margin-right: 10px;
+   }
 </style>
