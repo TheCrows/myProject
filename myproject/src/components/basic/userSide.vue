@@ -31,11 +31,11 @@ export default {
 
       .user-side-head{
         height: 800px;
-        background: rgb(165, 91, 91);
+        background: rgb(158, 105, 105);
       }
       .user-side-info{
         height: 1000px;
-        background: rgb(91, 132, 165);
+        background: rgb(105, 123, 138);
       }
     }
     .user-fixed{
