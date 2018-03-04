@@ -6,8 +6,8 @@
           </a>
           <nav class="head-nav">
               <a href="#" class="head-item">首页</a>
+              <a href="#" class="head-item">地图</a>
               <a href="#" class="head-item">发现</a>
-              <a href="#" class="head-item">话题 </a>
           </nav>
           <summary class="user-info">
               <!-- <div class="user-det">
@@ -37,8 +37,15 @@ export default {
   name:'headerDiv',
   data(){
       return{
-          
+          isfixed:false
       }
+  },
+  mounted(){
+      window.addEventListener('scroll', ()=>{
+          if(!(document .documentElement.scrollTop ? document .documentElement.scrollTop : document .body.scrollTop)){
+              this.isfixed=false
+          }else{this.isfixed=true}
+      })
   },
   components:{headerIcon}
 }
@@ -48,6 +55,11 @@ export default {
         padding-top: 5px;
         padding-bottom: 5px;
         box-shadow: 0px 0px 9px #888;
+        width: 100%;
+        position: fixed;
+        top:0;
+        z-index: 99;
+        background: rgba(255, 255, 255, .85);
         .header-contain{
             width: 1000px;
             margin: 0 auto;
@@ -68,9 +80,9 @@ export default {
             .user-info{
                 flex: 1;
                 display: flex;
-                cursor: pointer;
                 justify-content: flex-end;
                 .user-det{
+                    cursor: pointer;
                     display: block;
                      .user-img{
                     height: 35px;
