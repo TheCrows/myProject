@@ -54,7 +54,7 @@ export default {
     }
     .application-main{
       width:1000px;
-      margin: 55px auto 0 auto;
+      margin: 80px auto 0 auto;
       
     }
 </style>

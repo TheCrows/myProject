@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-      <div style='width:730px; height:3000px'>111</div>
+      <div style='width:780px; height:3000px'></div>
       <user-side></user-side>
       
   </div>

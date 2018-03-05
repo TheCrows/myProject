@@ -1,11 +1,15 @@
 <template>
-  <div class="user-side"  :class="{'user-fixed':isfixed}">
+  <div class="user-side">
     <div class="user-side-head">
-        9999
+        <img src="../../assets/img/userico.jpg" alt="">
+        <span class="big-username">TheCrows</span>
+        <span class="my-bio">这里是我的签名</span></br>
+        <div class="side-butt"></div>
+        <el-button>修改信息</el-button>
+        <el-button>我的关注</el-button>
+
+
     </div> 
-    <div class="user-side-info">
-        9999
-    </div>   
   </div>
 </template>
 <script>
@@ -13,35 +17,34 @@ export default {
   name:'userSide',
   data(){
       return{
-          isfixed:false
+          
       }
-  },
-  mounted(){
-      window.addEventListener('scroll', ()=>{
-          if((document .documentElement.scrollTop ? document .documentElement.scrollTop : document .body.scrollTop)<=850){
-              this.isfixed=false
-          }else{this.isfixed=true}
-      })
-  },
+  }
 }
 </script>
 <style lang="scss">
     .user-side{
-      width: 270px;
+      width: 220px;
+        .user-side-head{
+            img{
+                width: 100%;
+                border-radius: 5px;
+                vertical-align: middle
+            }
+        .big-username{
+            font-size: 30px;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .my-bio{
+            color: #aaa;
+        }
+        .side-butt{
+            margin-top: 25px;
+        }
+      }
+      
+    }
 
-      .user-side-head{
-        height: 800px;
-        background: rgb(158, 105, 105);
-      }
-      .user-side-info{
-        height: 1000px;
-        background: rgb(105, 123, 138);
-      }
-    }
-    .user-fixed{
-      position: fixed;
-      top: -745px;
-      right: 0px;
-      z-index: 98;
-    }
 </style>
