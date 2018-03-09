@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="add-btn" @click="showAddStory">+</div>
+  <div class="add-btn" @click="showAddStory">{{ifshow ? '-' : '+'}}</div>
   <div class="add-story" v-show="ifshow">
       <el-row>
         <el-col :span="18" :offset="1">
