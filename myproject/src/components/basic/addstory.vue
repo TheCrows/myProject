@@ -94,6 +94,7 @@
      font-size: 30px;
      padding-left: 30px;
      cursor: pointer;
+     user-select:none;
   }
   .add-story {
 

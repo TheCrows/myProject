@@ -5,9 +5,9 @@
               <header-icon iconSize='40'></header-icon>
           </a>
           <nav class="head-nav">
-              <a href="#" class="head-item">首页</a>
-              <a href="#" class="head-item">地图</a>
-              <a href="#" class="head-item">发现</a>
+              <router-link to='/' class="head-item">首页</router-link>
+              <router-link to='/map' class="head-item">地图</router-link>
+              <!-- <a class="head-item">发现</a> -->
           </nav>
           <summary class="user-info">
               <!-- <div class="user-det">
