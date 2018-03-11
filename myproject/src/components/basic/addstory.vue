@@ -5,19 +5,19 @@
       <el-row>
         <el-col :span="18" :offset="1">
           <div class="grid-content">
-            <el-input v-model="input" placeholder="请输入标题" size="medium"></el-input>
+            <el-input v-model="commitData.title" placeholder="请输入标题" size="medium"></el-input>
           </div>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="9" :offset="1">
           <div class="grid-content">
-            <el-date-picker v-model="value1" type="date" placeholder="选择日期" size="medium"></el-date-picker>
+            <el-date-picker v-model="commitData.time" type="date" placeholder="选择日期" size="medium"></el-date-picker>
           </div>
         </el-col>
         <el-col :span="9">
           <div class="grid-content">
-            <el-input v-model="input" placeholder="请输入地点" size="medium"></el-input>
+            <el-input v-model="commitData.place" placeholder="请输入地点" size="medium"></el-input>
           </div>
         </el-col>
       </el-row>
@@ -43,12 +43,12 @@
       <el-row>
         <el-col :span="18" :offset="1">
           <div class="grid-content">
-            <el-input type="textarea" :autosize="{ minRows: 2, maxRows: 4}" placeholder="请输入内容" v-model="textarea3"></el-input>
+            <el-input type="textarea" :autosize="{ minRows: 2, maxRows: 4}" placeholder="请输入内容" v-model="commitData.article"></el-input>
           </div>
         </el-col>
         <el-col :span="2" :offset="1">
           <div class="grid-content">
-              <el-button>提交</el-button>
+              <el-button @click="addThisInfo">提交</el-button>
           </div>
         </el-col>
       </el-row>
@@ -60,12 +60,19 @@
     name: 'addStory',
     data() {
       return {
-        value1: '',
-        input:'',
-        textarea3:'',
+        
         ifshow:false,
         dialogImageUrl: '',
-        dialogVisible: false
+        dialogVisible: false,
+        commitData:{
+                id:Symbol(),
+                headurl: require("../../assets/img/userico.jpg"),
+                name: 'TheCrows',
+                title: '',
+                time: '',
+                place: '',
+                article: ''
+            }
       }
     },
     methods: {
@@ -78,6 +85,9 @@
       },
       showAddStory(){
         this.ifshow=!this.ifshow
+      },
+      addThisInfo(){
+        this.$store.commit('addInfo',this.commitData)
       }
     }
   }

@@ -49,6 +49,13 @@ const store = new Vuex.Store({
                 article: '“今日下午四时半，本市东区102街枪击案，一人死亡，四人受伤。” 我回到宾馆刚打开电视，一条滚动新闻就从屏幕下方跳了出来。 ——东区102街，正是我和Ben、Isabel、Blake今天探险的地方。'
             },
         ]
+    },
+    mutations:{
+        addInfo(state,msg){
+            // let nmsg=msg
+            // nmsg.id=Symbol()
+            state.infoCardData.unshift(msg)
+        }
     }
 })
 
