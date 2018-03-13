@@ -17,15 +17,7 @@ export default {
   name:'infocard',
   data(){
     return{
-      // cardData:{
-      //   id:Symbol(),
-      //   headurl:require("../../assets/img/userico.jpg"),
-      //   name:'TheCrows',
-      //   title:'一个工业园区里的文艺青年和他的 10 年',
-      //   time:'2018-03-13',
-      //   place:'New Jersey / China',
-      //   article:'每个人心中都住着一个英雄。人格心理学可以帮你运用人格的特质来把握自己的命运，成为自己的superman。无论你是何种人格，都可以了解心理分析的这些要点，展现出更好的你。塑造直通美好未来的心理预定能力。活出你想要的样子。'
-      // }
+     
     }
    
   },

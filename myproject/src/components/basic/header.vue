@@ -10,10 +10,7 @@
               <!-- <a class="head-item">发现</a> -->
           </nav>
           <summary class="user-info">
-              <!-- <div class="user-det">
-                  <img src="../../assets/img/userico.jpg" alt="" class="user-img">
-                  <span class="dropdown"></span>
-              </div> -->
+              
             <el-dropdown>
                 <span class="el-dropdown-link user-det">
                     <img src="../../assets/img/userico.jpg" alt="" class="user-img">
