@@ -30,7 +30,7 @@ const store = new Vuex.Store({
                 title: '千万不要让科学家听摇滚乐！',
                 time: '2018-03-13',
                 place: 'New Jersey / China',
-                article: '界上最可怕的词汇是哪一类？当然是动植物物种的拉丁语名了。 除去那些现存的或者确认灭绝的物种名字，每年都有17000到24000种新发现的动物物种被确认.'
+                article: '界上最可怕的词汇是哪一类？当然是动植物物种的拉丁语名了啊。 除去那些现存的或者确认灭绝的物种名字，每年都有17000到24000种新发现的动物物种被确认.'
             }, {
                 id: Symbol(),
                 headurl: require("../assets/img/userico.jpg"),
