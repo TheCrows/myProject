@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-
-    <router-view/>
+    <menus class="menustyle"></menus>
+    <router-view class="mainview"></router-view>
   </div>
 </template>
 
 <script>
+import menus from './components/menu'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    menus
+  }
 }
 </script>
 
@@ -23,8 +27,22 @@ export default {
     ol,ul,li { list-style:none; }
     input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
     table { border-collapse:collapse; }
-    html {overflow-y: scroll;}
+    /* html {overflow-y: scroll;} */
     .clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
     .clearfix { *zoom:1; }
     html,body,#app{height: 100%;width: 100%}
+
+    #app{
+      display: flex;
+    }
+    .menustyle{
+      height: 100%;
+      width: 60px;
+      display: inline-flex;
+    }
+    .mainview{
+      display: inline-flex;
+      flex:1;
+      overflow: hidden;
+    }
 </style>
